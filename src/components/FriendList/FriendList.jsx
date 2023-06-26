@@ -1,5 +1,6 @@
 import css from "./FriendList.module.css";
 import clsx from "clsx";
+import PropTypes from 'prop-types';
 
 export const FriendList = ({friends}) => {
 return (
@@ -20,4 +21,14 @@ return (
     }
     </ul>
 )
+}
+FriendList.propTypes = {
+friends: PropTypes.arrayOf(
+    PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        avatar: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        isOnline: PropTypes.bool.isRequired
+    })
+).isRequired
 }

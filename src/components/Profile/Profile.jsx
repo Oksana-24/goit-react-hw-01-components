@@ -1,8 +1,8 @@
 import { Avatar, DescriptionAvatar, ListStats, ProfileSection } from "./Profile.styled"
 
 export const Profile = ({ username, tag, location, avatar, stats: { followers, views, likes } }) => {
-    return (
-    <ProfileSection>
+return (
+<ProfileSection>
     <DescriptionAvatar>
     <Avatar
         src={avatar}

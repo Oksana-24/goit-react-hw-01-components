@@ -5,18 +5,16 @@ export const ProfileSection = styled.div`
     flex-direction: column;
     align-items: center;
     margin-top: 30px;
-    /* padding-top: 10px; */
-    width: 400px;
     height: 100%;
-    outline: 4px solid #e65206;
-    background-color: rgb(246 248 154);
+    outline: rgb(230 82 6 / 33%) solid 2px;
+    background-color: rgb(255 235 59 / 4%);
 `
 export const DescriptionAvatar = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    background-color: wheat;
+    background-color: #b5c08221;
 
     p {
         margin: 5px;
@@ -29,7 +27,7 @@ export const DescriptionAvatar = styled.div`
 export const Avatar = styled.img`
     border-radius: 50%;
     width: 250px;
-    border: 3px solid rgb(240 7 7 / 14%);
+    border: 1px solid #ff000047;
 `
 export const ListStats = styled.ul`
     display: flex;
@@ -41,13 +39,13 @@ export const ListStats = styled.ul`
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 70px;
-        border: 1px solid red;
+        width: 100px;
+        border: 1px solid #ff000047;
     }
 
     span {
         margin-bottom: 5px;
-        font-weight: 400;
+        font-weight: 500;
         font-size: 16px;
         line-height: 1.7;
     }

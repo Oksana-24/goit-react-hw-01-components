@@ -1,25 +1,26 @@
-import { StatisticsList, StatisticsSection } from "./Statistics.styled"
-import PropTypes from 'prop-types'
+import { StatisticsList, StatisticsSection } from './Statistics.styled';
+import PropTypes from 'prop-types';
 
 function getRandomHexColor() {
-    return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
-export const Statistics = ({title, stats}) => {
-return (
+export const Statistics = ({ title, stats }) => {
+  return (
     <StatisticsSection>
-        {title && <h2 className="title">{title}</h2>}
-    <StatisticsList>
+      {title && <h2 className="title">{title}</h2>}
+      <StatisticsList>
         {stats.map(({ id, label, percentage }) => {
-            return (<li key={id}
-            style={{backgroundColor:getRandomHexColor()}}> 
-                <span>{label}</span>
-                <span>{percentage}</span>
-        </li>)
+          return (
+            <li key={id} style={{ backgroundColor: getRandomHexColor() }}>
+              <span>{label}</span>
+              <span>{percentage}</span>
+            </li>
+          );
         })}
-    </StatisticsList>
-        
-    {/* <ul className="stat-list">
+      </StatisticsList>
+
+      {/* <ul className="stat-list">
         <li className="item">
             <span className="label">.docx</span>
             <span className="percentage">4%</span>
@@ -37,16 +38,16 @@ return (
             <span className="percentage">12%</span>
         </li>
     </ul> */}
-</StatisticsSection>
-    )
-}
+    </StatisticsSection>
+  );
+};
 Statistics.propTypes = {
-    title: PropTypes.string,
-    stats: PropTypes.arrayOf(
-        PropTypes.shape({
-            id: PropTypes.string.isRequired,
-            label: PropTypes.string.isRequired,
-            percentage:PropTypes.number.isRequired
-        })
-    )
-}
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ),
+};
